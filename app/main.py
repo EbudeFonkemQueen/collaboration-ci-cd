@@ -6,8 +6,8 @@ app = Flask(__name__)
 
 # Base de données "en mémoire" pour simplifier le TP
 _tasks = [
-    {"id": 1, "title": "Apprendre la CI/CD", "done": False},
-    {"id": 2, "title": "Forker le projet", "done": True},
+    {"id": 1, "title": "Apprendre la CI/CD", "completed": False},
+    {"id": 2, "title": "Forker le projet", "completed": True},
 ]
 
 
