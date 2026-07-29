@@ -24,3 +24,12 @@ repos:
     rev: v8.18.4
     hooks:
       - id: gitleaks
+# --- Local hook: run pytest before every push ---
+  - repo: local
+    hooks:
+      - id: pytest-before-push
+        name: Pytest tests (before push)
+        entry: pytest -q
+        language: system
+        pass_filenames: false
+        stages: [pre-push]      # only runs on a git push
